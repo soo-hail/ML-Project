@@ -1,5 +1,5 @@
-# Setyp.py Instruction-Manual for our Python-Project, that helps other to install required dependencies automatically, used for creating Python-Packages. Unlike "requirements.txt" it allows to publish project(as package) on "PyPi".
-# -e . : Installs our own package in editable mode. Changes in your source code are immediately reflected
+# Setyp.py enables our package(project) to install required dependencies, when others installed and using it.  
+# -e . : Installs our own package in editable mode. Changes in your source code are immediately reflected.
 # '-e .': super useful when developing a package, creates a 'live-link' to the code, used to test our package 'without reinstalling' package when we make changes in code(package's code). 
 
 from setuptools import find_packages, setup
