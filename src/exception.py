@@ -24,3 +24,10 @@ class CustomException(Exception):
     # Prints something like: <0x7f8b3c1d2e40> - CustomException Object.
     # Using __str__, we can directly print an object and get readable output instead of seeing the object Memory-Location.
     
+# Testing 'exception.py'
+if __name__ == '__main__':
+    try:
+        ans = 1/0
+    except Exception as e:
+        raise CustomException(e, sys)  
+    
