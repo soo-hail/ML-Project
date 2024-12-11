@@ -10,6 +10,7 @@ from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformationConfig
 from src.components.data_transformation import DataTransformation 
+from src.components.model_trainer import ModelTrainer
 
 # NOTE:
 # dataclass is used to avoid writing boilerplate code, it automatically generates common methods like __init__, __repr__, and __eq__. 
@@ -70,4 +71,9 @@ if __name__ == '__main__':
     
     # Data Transformation.
     data_tranformation = DataTransformation()
-    data_tranformation.initiate_data_transformation(train_path=train_data_path, test_path=test_data_path)
+    train_arr, test_arr, preprocessor_path = data_tranformation.initiate_data_transformation(train_path=train_data_path, test_path=test_data_path)
+
+    # Model Trainer
+    model_trainer = ModelTrainer()
+    r2score = model_trainer.initiate_model_trainer(train_arr, test_arr, preprocessor_path)
+    print(r2score)
