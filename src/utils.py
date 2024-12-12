@@ -49,4 +49,12 @@ def evaluate_models(X_train, y_train, X_test, y_test, models):
     
     except Exception as e:
         raise CustomException(e, sys)
-
+    
+# Function to Load Objects from Artifacts.
+def load_objects(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            return dill.load(f)
+        
+    except Exception as e:
+        raise CustomException(e, sys)
