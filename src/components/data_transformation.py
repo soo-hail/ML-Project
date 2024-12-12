@@ -22,7 +22,7 @@ class DataTransformationConfig:
     # To store Paths
     
     # Path to store pre-processed data for later use.
-    preprocessor_obj_file_path = os.path.join('artfacts', 'preprocessor.pkl') 
+    preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl') 
     
 
 class DataTransformation:
