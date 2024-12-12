@@ -2,7 +2,7 @@ import sys
 import pandas as pd
 
 from src.exception import CustomException
-from src.utils import load_object
+from src.utils import load_objects
 
 
 class PredictPipeline:
@@ -16,8 +16,8 @@ class PredictPipeline:
             preprocessor_path = 'artifacts/preprocessor.pkl' # To Transform Data.
             
             # Load Model and Preprocessor from Artifacts.
-            model = load_object(model_path)
-            preprocessor = load_object(preprocessor_path)
+            model = load_objects(model_path)
+            preprocessor = load_objects(preprocessor_path)
             
             # Transfrom the data(features).
             y_input = preprocessor.transform(features)
