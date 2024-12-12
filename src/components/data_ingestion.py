@@ -31,8 +31,8 @@ class DataIngestion:
         logging.info('Entered into initiate_data_ingestion')
 
         try:
-            # Load the dataset into a DataFrame
-            df = pd.read_csv('notebook/data/StudentsPerformance.csv')
+            # Load the dataset into a DataFrame 
+            df = pd.read_csv(r'C:\Users\Sohail Mohammed\OneDrive\Desktop\Projects\ML-Project\notebook\data\StudentsPerformance.csv')
             logging.info('Dataset loaded into DataFrame')
 
             # Create the directories if they don't exist
