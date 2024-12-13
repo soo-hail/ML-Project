@@ -32,13 +32,13 @@ class DataTransformation:
         
     def data_transformer(self):
         try:
-            num_features = ['reading score', 'writing score']
+            num_features = ['reading_score', 'writing_score']
             cat_features = [
                 'gender',
-                'race/ethnicity',
-                'parental level of education',	
+                'race_ethnicity',
+                'parental_level_of_education',	
                 'lunch',	
-                'test preparation course'
+                'test_preparation_course'
             ]
             
             # Create PipeLines for numerical and categorical features.
@@ -84,8 +84,8 @@ class DataTransformation:
             logging.info('Obtaining preprocessor-object.......')
             preprocessor_obj = self.data_transformer()
             
-            target = 'math score'
-            num_features = ['reading score', 'writing score']
+            target = 'math_score'
+            num_features = ['reading_score', 'writing_score']
             
             # Separate input and output(target) for the model.
             train_input_df = train_df.drop(columns=[target], axis=1)

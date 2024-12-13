@@ -26,11 +26,13 @@ def predict_datapoint():
         # Data is converted into DataFrame.
         df = data.get_data_as_df()
         
+        print(df)
+        
         predict_pipeline = PredictPipeline()
         
         math_score = predict_pipeline.predict(df)
         
-        return render_template('result.html', results = math_score[0])
+        return render_template('result.html', results = round(math_score[0], 2))
     
     return render_template('index.html')
 
